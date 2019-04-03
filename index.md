@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+INSERT INTO students   VALUES ("Mary","101");
+INSERT INTO students   VALUES ("Jordan","102");
+INSERT INTO students   VALUES ("Lisa","103") ;
+INSERT INTO students   VALUES ("Mike","104") ;
+INSERT INTO students   VALUES ("Bill","105") ;
+INSERT INTO students   VALUES ("Polly","106") ;
+INSERT INTO students   VALUES ("Jenna","107") ;
+INSERT INTO students   VALUES ("Mitch","108") ;
+INSERT INTO students   VALUES ("David","109") ;
 
-You can use the [editor on GitHub](https://github.com/RaoInderjeetSingh/Classprojects/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+INSERT INTO classes   VALUES ("java","B230", "MON_AM", "1103");
+INSERT INTO classes   VALUES ("csharp","B122", "Tue_PM", "1247");
+INSERT INTO classes   VALUES ("Math","A506", "WED_EV", "1389");
+INSERT INTO classes   VALUES ("Database","B123", "TUE_PM", "1455");
+INSERT INTO classes   VALUES ("projtMng","B125", "FRI_PM", "1203");
+INSERT INTO classes   VALUES ("EmgTech","B122", "FRI_EV", "1103");
+INSERT INTO classes   VALUES ("csharp","B125", "FRI_PM", "1451");
+INSERT INTO classes   VALUES ("Math","E111", "WED_AM", "1673");
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+INSERT INTO enrollments   VALUES ("101","1103");
+INSERT INTO enrollments   VALUES ("102","1247");
+INSERT INTO enrollments   VALUES ("103","1389");
+INSERT INTO enrollments   VALUES ("104","1455");
+INSERT INTO enrollments   VALUES ("105","1203");
+INSERT INTO enrollments   VALUES ("106","1158");
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RaoInderjeetSingh/Classprojects/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Select students.studentname,students.studentid,classes.classname,classes.datetime,classes.classid
+from students,classes,enrollments
+where students.studentid=enrollments.studentid and classes.classid=enrollments.classid
